@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.view.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:0.5];
+    self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.sendReplyView];
 }
 

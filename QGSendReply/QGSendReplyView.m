@@ -75,9 +75,10 @@
 - (UIView *) backgroundView
 {
     if (!_backgroundView) {
-        
-        _backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 50)];
-        _backgroundView.backgroundColor = [UIColor whiteColor];
+        _backgroundView = [[UIView alloc] initWithFrame:CGRectMake(-1, 0, self.frame.size.width + 2, 50)];
+        _backgroundView.backgroundColor = UIColorFromRGB(0xf6f6f6);
+        _backgroundView.layer.borderColor = UIColorFromRGB(0x000000).CGColor;
+        _backgroundView.layer.borderWidth = 0.5;
         _backgroundView.userInteractionEnabled = YES;
     }
     return _backgroundView;
@@ -93,7 +94,7 @@
         _textView.text = @"";
         _textView.textAlignment = NSTextAlignmentLeft;
         _textView.backgroundColor = [UIColor clearColor];
-        _textView.layer.borderColor = [UIColor blackColor].CGColor;
+        _textView.layer.borderColor = UIColor(98, 172, 193, 1).CGColor;
         _textView.layer.borderWidth = 1;
         _textView.layer.cornerRadius = 15;
         
@@ -163,7 +164,11 @@
         textView.frame = CGRectMake(frame.origin.x, 8, frame.size.width, size.height);
         self.backgroundView.frame = CGRectMake(0, self.backgroundView.frame.origin.y - (size.height - frame.size.height), self.backgroundView.frame.size.width, self.backgroundView.frame.size.height + (size.height - frame.size.height));
     }
+}
+- (BOOL)textViewShouldBeginEditing:(UITextView *)textView
+{
     
+    return YES;
 }
 -(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range
 replacementText:(NSString *)text
@@ -181,8 +186,6 @@ replacementText:(NSString *)text
 - (void)keyboardWillShow:(NSNotification *)aNotification
 {
     self.frame = CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT);
-    
-    
     //获取键盘的高度
     NSDictionary *userInfo = [aNotification userInfo];
     NSValue *aValue = [userInfo objectForKey:UIKeyboardFrameEndUserInfoKey];
@@ -193,21 +196,10 @@ replacementText:(NSString *)text
     frame.origin.y = self.frame.size.height - frame.size.height - height;
     self.backgroundView. frame = frame;
     
-    
-    
-    
-    
-    
 }
 
 //当键退出时调用
 - (void)keyboardWillHide:(NSNotification *)aNotification{
-    
-    //获取键盘的高度
-    NSDictionary *userInfo = [aNotification userInfo];
-    NSValue *aValue = [userInfo objectForKey:UIKeyboardFrameEndUserInfoKey];
-    CGRect keyboardRect = [aValue CGRectValue];
-    CGFloat height = keyboardRect.size.height;
     
     CGRect frame = self.backgroundView.frame;
     frame.origin.y = 0;
