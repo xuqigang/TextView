@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D10B8D1F6EC2F2A097F0B28 /* libPods-QGSendReply.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03222076168B1F5A13C89A20 /* libPods-QGSendReply.a */; };
 		7B04872E1F20D5DD00E48884 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B04872D1F20D5DD00E48884 /* main.m */; };
 		7B0487311F20D5DD00E48884 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0487301F20D5DD00E48884 /* AppDelegate.m */; };
 		7B0487341F20D5DD00E48884 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0487331F20D5DD00E48884 /* ViewController.m */; };
@@ -14,6 +15,7 @@
 		7B0487391F20D5DD00E48884 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B0487381F20D5DD00E48884 /* Assets.xcassets */; };
 		7B04873C1F20D5DD00E48884 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B04873A1F20D5DD00E48884 /* LaunchScreen.storyboard */; };
 		7B0487471F20D5DD00E48884 /* QGSendReplyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0487461F20D5DD00E48884 /* QGSendReplyUITests.m */; };
+		7B0487541F20D64100E48884 /* QGSendReplyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0487531F20D64100E48884 /* QGSendReplyView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03222076168B1F5A13C89A20 /* libPods-QGSendReply.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QGSendReply.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B0487291F20D5DD00E48884 /* QGSendReply.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QGSendReply.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B04872D1F20D5DD00E48884 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7B04872F1F20D5DD00E48884 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -40,6 +43,11 @@
 		7B0487421F20D5DD00E48884 /* QGSendReplyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QGSendReplyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B0487461F20D5DD00E48884 /* QGSendReplyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGSendReplyUITests.m; sourceTree = "<group>"; };
 		7B0487481F20D5DD00E48884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B0487511F20D5F100E48884 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		7B0487521F20D64100E48884 /* QGSendReplyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QGSendReplyView.h; sourceTree = "<group>"; };
+		7B0487531F20D64100E48884 /* QGSendReplyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QGSendReplyView.m; sourceTree = "<group>"; };
+		BDBBAD27BD68B81E231DD534 /* Pods-QGSendReply.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QGSendReply.release.xcconfig"; path = "Pods/Target Support Files/Pods-QGSendReply/Pods-QGSendReply.release.xcconfig"; sourceTree = "<group>"; };
+		E2276E2E1D80626549E876C9 /* Pods-QGSendReply.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QGSendReply.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QGSendReply/Pods-QGSendReply.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D10B8D1F6EC2F2A097F0B28 /* libPods-QGSendReply.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +69,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19B09C0510C1BED5AA12F5C0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E2276E2E1D80626549E876C9 /* Pods-QGSendReply.debug.xcconfig */,
+				BDBBAD27BD68B81E231DD534 /* Pods-QGSendReply.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7B0487201F20D5DD00E48884 = {
 			isa = PBXGroup;
 			children = (
 				7B04872B1F20D5DD00E48884 /* QGSendReply */,
 				7B0487451F20D5DD00E48884 /* QGSendReplyUITests */,
 				7B04872A1F20D5DD00E48884 /* Products */,
+				19B09C0510C1BED5AA12F5C0 /* Pods */,
+				902566151A2AD2C150385816 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,10 +105,13 @@
 				7B0487301F20D5DD00E48884 /* AppDelegate.m */,
 				7B0487321F20D5DD00E48884 /* ViewController.h */,
 				7B0487331F20D5DD00E48884 /* ViewController.m */,
+				7B0487521F20D64100E48884 /* QGSendReplyView.h */,
+				7B0487531F20D64100E48884 /* QGSendReplyView.m */,
 				7B0487351F20D5DD00E48884 /* Main.storyboard */,
 				7B0487381F20D5DD00E48884 /* Assets.xcassets */,
 				7B04873A1F20D5DD00E48884 /* LaunchScreen.storyboard */,
 				7B04873D1F20D5DD00E48884 /* Info.plist */,
+				7B0487511F20D5F100E48884 /* PrefixHeader.pch */,
 				7B04872C1F20D5DD00E48884 /* Supporting Files */,
 			);
 			path = QGSendReply;
@@ -111,6 +134,14 @@
 			path = QGSendReplyUITests;
 			sourceTree = "<group>";
 		};
+		902566151A2AD2C150385816 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03222076168B1F5A13C89A20 /* libPods-QGSendReply.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +149,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B04874B1F20D5DD00E48884 /* Build configuration list for PBXNativeTarget "QGSendReply" */;
 			buildPhases = (
+				5748437181360C1E478F1182 /* [CP] Check Pods Manifest.lock */,
 				7B0487251F20D5DD00E48884 /* Sources */,
 				7B0487261F20D5DD00E48884 /* Frameworks */,
 				7B0487271F20D5DD00E48884 /* Resources */,
+				99107D0D81F7342F4B1745C4 /* [CP] Embed Pods Frameworks */,
+				6CDFB6E18CA504F4D87AF322 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -208,12 +242,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5748437181360C1E478F1182 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6CDFB6E18CA504F4D87AF322 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QGSendReply/Pods-QGSendReply-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99107D0D81F7342F4B1745C4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QGSendReply/Pods-QGSendReply-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7B0487251F20D5DD00E48884 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7B0487341F20D5DD00E48884 /* ViewController.m in Sources */,
+				7B0487541F20D64100E48884 /* QGSendReplyView.m in Sources */,
 				7B0487311F20D5DD00E48884 /* AppDelegate.m in Sources */,
 				7B04872E1F20D5DD00E48884 /* main.m in Sources */,
 			);
@@ -349,8 +432,10 @@
 		};
 		7B04874C1F20D5DD00E48884 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2276E2E1D80626549E876C9 /* Pods-QGSendReply.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/QGSendReply/PrefixHeader.pch";
 				INFOPLIST_FILE = QGSendReply/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reply.app.QGSendReply;
@@ -360,8 +445,10 @@
 		};
 		7B04874D1F20D5DD00E48884 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDBBAD27BD68B81E231DD534 /* Pods-QGSendReply.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/QGSendReply/PrefixHeader.pch";
 				INFOPLIST_FILE = QGSendReply/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reply.app.QGSendReply;

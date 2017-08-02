@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7B0487281F20D5DD00E48884"
-               BuildableName = "QGSendReply.app"
-               BlueprintName = "QGSendReply"
-               ReferencedContainer = "container:QGSendReply.xcodeproj">
+               BlueprintIdentifier = "AD50DD67F3209416ADBC4537D7D1CF92"
+               BuildableName = "libPods-QGSendReply.a"
+               BlueprintName = "Pods-QGSendReply"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7B0487411F20D5DD00E48884"
-               BuildableName = "QGSendReplyUITests.xctest"
-               BlueprintName = "QGSendReplyUITests"
-               ReferencedContainer = "container:QGSendReply.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7B0487281F20D5DD00E48884"
-            BuildableName = "QGSendReply.app"
-            BlueprintName = "QGSendReply"
-            ReferencedContainer = "container:QGSendReply.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -61,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7B0487281F20D5DD00E48884"
-            BuildableName = "QGSendReply.app"
-            BlueprintName = "QGSendReply"
-            ReferencedContainer = "container:QGSendReply.xcodeproj">
+            BlueprintIdentifier = "AD50DD67F3209416ADBC4537D7D1CF92"
+            BuildableName = "libPods-QGSendReply.a"
+            BlueprintName = "Pods-QGSendReply"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -80,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7B0487281F20D5DD00E48884"
-            BuildableName = "QGSendReply.app"
-            BlueprintName = "QGSendReply"
-            ReferencedContainer = "container:QGSendReply.xcodeproj">
+            BlueprintIdentifier = "AD50DD67F3209416ADBC4537D7D1CF92"
+            BuildableName = "libPods-QGSendReply.a"
+            BlueprintName = "Pods-QGSendReply"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

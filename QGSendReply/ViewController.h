@@ -2,7 +2,7 @@
 //  ViewController.h
 //  QGSendReply
 //
-//  Created by Hanxiaojie on 2017/7/20.
+//  Created by Xuqigang on 2017/5/14.
 //  Copyright © 2017年 徐其岗. All rights reserved.
 //
 

@@ -1,0 +1,29 @@
+//
+//  PrefixHeader.pch
+//  QGSendReply
+//
+//  Created by Xuqigang on 2017/5/14.
+//  Copyright © 2017年 徐其岗. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#define LineViewColor UIColor(226, 226, 226, 1)
+//屏幕尺寸
+#define SCREENWIDTH [[UIScreen mainScreen] bounds].size.width
+#define SCREENHEIGHT [[UIScreen mainScreen] bounds].size.height
+#define SCALE [[UIScreen mainScreen] bounds].size.width / 320
+#define UIScale(x) x * SCALE
+
+//字符串转换
+#define ToString(x) [NSString stringWithFormat:@"%@",x]
+#define UIColor(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+#define UIFont(x) [UIFont systemFontOfSize:x]
+
+#import <Masonry.h>
+#endif /* PrefixHeader_pch */
