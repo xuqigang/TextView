@@ -8,6 +8,16 @@
 
 #import "QGSendReplyView.h"
 
+@interface QGSendReplyView ()
+
+{
+    UILabel * placeholderLabel;
+}
+@property (nonatomic, strong) UIView * backgroundView;
+@property (nonatomic, strong) UITextView * textView;
+@property (nonatomic, strong) UIButton * sendButton;
+
+@end
 @implementation QGSendReplyView
 
 - (instancetype) initWithFrame:(CGRect)frame
@@ -36,20 +46,10 @@
             
         }];
         
-        [self.backgroundView addSubview:self.shareButton];
-        [self.shareButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        [self.backgroundView addSubview:self.sendButton];
+        [self.sendButton mas_makeConstraints:^(MASConstraintMaker *make) {
             
-            make.right.mas_equalTo(-8);
-            make.bottom.mas_equalTo(-17);
-            make.width.mas_equalTo(40);
-            make.height.mas_equalTo(16);
-            
-        }];
-        
-        [self.backgroundView addSubview:self.careButton];
-        [self.careButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            
-            make.right.mas_equalTo(self.shareButton.mas_left).mas_offset(-5);
+            make.right.mas_equalTo(-5);
             make.bottom.mas_equalTo(-17);
             make.width.mas_equalTo(40);
             make.height.mas_equalTo(15);
@@ -79,8 +79,6 @@
         _backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 50)];
         _backgroundView.backgroundColor = [UIColor whiteColor];
         _backgroundView.userInteractionEnabled = YES;
-        
-        
     }
     return _backgroundView;
 }
@@ -88,47 +86,51 @@
 {
     if (!_textView) {
         
-        _textView = [[UITextView alloc] initWithFrame:CGRectMake(8, 8 , self.frame.size.width - 110, 36)];
+        _textView = [[UITextView alloc] initWithFrame:CGRectMake(8, 8 , self.frame.size.width - 60, 36)];
         _textView.textColor = UIColorFromRGB(0x666666);
         _textView.font = UIFont(16);
         _textView.delegate = self;
+        _textView.text = @"";
         _textView.textAlignment = NSTextAlignmentLeft;
         _textView.backgroundColor = [UIColor clearColor];
         _textView.layer.borderColor = [UIColor blackColor].CGColor;
         _textView.layer.borderWidth = 1;
-        _textView.layer.cornerRadius = 10;
+        _textView.layer.cornerRadius = 15;
+        
     }
     return _textView;
 }
 
-- (UIButton *) careButton
+- (UIButton *) sendButton
 {
-    if (!_careButton) {
-        _careButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _careButton.tag = 0;
-        _careButton.titleLabel.font = UIFont(15);
-        [_careButton setTitle:@"关注" forState:UIControlStateNormal];
-        [_careButton setTitleColor:UIColorFromRGB(0x666666) forState:UIControlStateNormal];
+    if (!_sendButton) {
+        _sendButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _sendButton.tag = 0;
+        _sendButton.titleLabel.font = UIFont(15);
+        [_sendButton setTitle:@"发送" forState:UIControlStateNormal];
+        [_sendButton setTitleColor:UIColorFromRGB(0x666666) forState:UIControlStateNormal];
+        [_sendButton addTarget:self action:@selector(sendButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
-    return _careButton;
+    return _sendButton;
 }
 
-- (UIButton *) shareButton
-{
-    if (!_shareButton) {
-        _shareButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _shareButton.tag = 0;
-        _shareButton.titleLabel.font = UIFont(15);
-        [_shareButton setTitle:@"分享" forState:UIControlStateNormal];
-        [_shareButton setTitleColor:UIColorFromRGB(0x666666) forState:UIControlStateNormal];
-    }
-    return _shareButton;
-}
 - (void) setPlaceholder:(NSString *)placeholder
 {
     _placeholder = placeholder;
     placeholderLabel.text = placeholder;
 }
+
+- (void) sendButtonClicked:(UIButton *) button
+{
+    if (_block) {
+        _block(self.textView.text);
+    }
+    self.textView.text = @"";
+    [self.textView resignFirstResponder];
+    placeholderLabel.hidden = NO;
+
+}
+#pragma mark---------------UITextViewDelegate-------------
 - (void)textViewDidChange:(UITextView *)textView
 {
     textView.scrollEnabled = NO;
@@ -138,8 +140,6 @@
     else if(!placeholderLabel.hidden){
         placeholderLabel.hidden = YES;
     }
-    
-    
     static CGFloat maxHeight =80.0f;
     CGRect frame = textView.frame;
     CGSize constraintSize = CGSizeMake(frame.size.width, MAXFLOAT);
@@ -148,7 +148,6 @@
         frame.origin.y = frame.origin.y + (frame.size.height - size.height);
         textView.frame = CGRectMake(frame.origin.x, 8, frame.size.width, size.height);
         self.backgroundView.frame = CGRectMake(0, self.backgroundView.frame.origin.y + (frame.size.height - size.height), self.backgroundView.frame.size.width, self.backgroundView.frame.size.height - (frame.size.height - size.height));
-        
     }
     else if(size.height>frame.size.height){
         if (size.height >= maxHeight)

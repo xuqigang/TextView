@@ -8,15 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^QGSendReplyViewBlock)(NSString * content);
 @interface QGSendReplyView : UIView <UITextViewDelegate>
-{
-    UILabel * placeholderLabel;
-}
-@property (nonatomic, strong) UIView * backgroundView;
+
 @property (nonatomic, strong) NSString * placeholder;  //设置占位符
-@property (nonatomic, strong) UITextView * textView;
-@property (nonatomic, strong) UIButton * careButton;
-@property (nonatomic, strong) UIButton * shareButton;
+@property (nonatomic, strong) QGSendReplyViewBlock block;
 
 - (instancetype) initWithFrame:(CGRect)frame;
+
 @end

@@ -29,6 +29,11 @@
     if (!_sendReplyView) {
         _sendReplyView = [[QGSendReplyView alloc] initWithFrame:CGRectMake(0, SCREENHEIGHT - 50, SCREENWIDTH, 50)];
         _sendReplyView.placeholder = @"发表评论...";
+        _sendReplyView.block = ^(NSString *content) {
+            
+            NSLog(@"要发表的内容：%@",content);
+            
+        };
 
     }
     return _sendReplyView;
