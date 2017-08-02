@@ -148,7 +148,7 @@
     if (size.height<frame.size.height) {
         frame.origin.y = frame.origin.y + (frame.size.height - size.height);
         textView.frame = CGRectMake(frame.origin.x, 8, frame.size.width, size.height);
-        self.backgroundView.frame = CGRectMake(0, self.backgroundView.frame.origin.y + (frame.size.height - size.height), self.backgroundView.frame.size.width, self.backgroundView.frame.size.height - (frame.size.height - size.height));
+        self.backgroundView.frame = CGRectMake(-1, self.backgroundView.frame.origin.y + (frame.size.height - size.height), self.backgroundView.frame.size.width, self.backgroundView.frame.size.height - (frame.size.height - size.height));
     }
     else if(size.height>frame.size.height){
         if (size.height >= maxHeight)
@@ -162,12 +162,11 @@
             textView.scrollEnabled = NO;    // 不允许滚动
         }
         textView.frame = CGRectMake(frame.origin.x, 8, frame.size.width, size.height);
-        self.backgroundView.frame = CGRectMake(0, self.backgroundView.frame.origin.y - (size.height - frame.size.height), self.backgroundView.frame.size.width, self.backgroundView.frame.size.height + (size.height - frame.size.height));
+        self.backgroundView.frame = CGRectMake(-1, self.backgroundView.frame.origin.y - (size.height - frame.size.height), self.backgroundView.frame.size.width, self.backgroundView.frame.size.height + (size.height - frame.size.height));
     }
 }
 - (BOOL)textViewShouldBeginEditing:(UITextView *)textView
 {
-    
     return YES;
 }
 -(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range
