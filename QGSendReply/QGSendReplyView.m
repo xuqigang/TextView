@@ -204,7 +204,6 @@ replacementText:(NSString *)text
     CGRect frame = self.backgroundView.frame;
     frame.origin.y = 0;
     self.backgroundView.frame = frame;
-    
     self.frame = CGRectMake(0, SCREENHEIGHT - self.backgroundView.frame.size.height, self.frame.size.width, self.backgroundView.frame.size.height);
 }
 
